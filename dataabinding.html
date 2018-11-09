@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script>
+        function read(){
+            var operant1=parseInt(document.getElementById("getnumber").value);
+            var operant2=parseInt(document.getElementById("getnumber1").value);
+            var operant3=parseInt(document.getElementById("getnumber2").value);
+            
+            if (operant1>operant2){
+                if(operant1>operant3){
+                console.log(operant1);
+                var b=operant1;
+                }
+                else {
+                    console.log(operant2);
+                    var b=operant2;
+                }
+            }
+            else if (operant2>operant3){
+                console.log(operant2);
+                var b=operant2;
+                
+            }
+            else {
+                console.log(operant3);
+                var b=operant3;
+
+            }
+            document.getElementById("result").innerHTML=b
+            
+            
+        }
+        
+        function red(){
+            var operant1=parseInt(document.getElementById("getnumber").value);
+            var operant2=parseInt(document.getElementById("getnumber1").value);
+            var operant3=parseInt(document.getElementById("getnumber2").value);
+            
+            if (operant1<operant2){
+                if(operant1<operant3){
+                console.log(operant1);
+                var s=operant1;
+                
+                }
+                else {
+                    console.log(operant2);
+                    var s=operant2;
+                }
+            }
+            else if (operant2<operant3){
+                console.log(operant2);
+                var s=operant2;
+            
+                
+            }
+            else {
+                console.log(operant3);
+                var s=operant3;
+                
+
+            }
+            
+        
+            document.getElementById("rlt").innerHTML=s
+            
+        }
+    </script>
+    </head>
+    <table>
+
+            <div class="container card">
+            <div class="row">
+                <div class="col-sm-6">operant1</div>
+                <div class="col-sm-6"><input type="number" class="form controll" id="getnumber"/></div>
+            </div><br>
+            <div>
+            <div class="row">
+                <div class="col-sm-6">operant2</div>
+                <div class="col-sm-6"><input type="number"class="form controll" id="getnumber1"/></div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-6">operant3</div>
+                <div class="col-sm-6"><input type="number"class="form controll" id="getnumber2"/></div>
+            </div><br>
+    
+            
+            
+            <div class="row">
+                <div class="col-sm-6"> <button class="btn btn-info" onclick="read()"> submit</button></div>
+                <div class="col-sm-6"><button class="btn btn-info" onclick="red()">submit</button></div>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-6"><h1 id="biggest">biggest</h1>
+            </div><br>
+            
+            <div class="row">
+                <div class="col-sm-12"><h2 id="smallest">smallest</h2>
+            </div><br>
+            <div class="row">
+                <div class="col-sm-6"> <p id="result">result</p></div>
+                <div class="col-sm-6"> <p id="rlt">result</p></div>
+
+            </div>
+        </div></table>
+    
+    </div>
+</body>
+</html>
