@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+{% block mycontent %}
+<br>
+<div class="row">
+    <div class="col-sm-3"></div> 
+    <div class="col-sm-6">
+    <form method="POST" action="/send">
+        <div class="card bg-danger" style="padding:5%">
+      
+        <div class="row">
+            <div class="col-sm-6">name</div>
+            <div class="col-sm-6"><input type="text" name=name class="form-control" placeholder="enter your name"></div>
+        </div><br>
+
+        <div class="row">    
+    
+            <div class="col-sm-6">email id</div>
+            <div class="col-sm-6"><input type="email" name=email class="form-control" placeholder="enter your email"></div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-sm-6">mobile number</div>
+            <div class="col-sm-6"><input type="number" name=phone class="form-control"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">subject</div>
+            <div class="col-sm-6"><input type="text" name=subject class="form-control"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-6">message</div>
+            <div class="col-sm-6"><textarea rows="3" cols="8"  class="form-control"></textarea></div>
+        </div><br>
+        
+        <div class="row">       
+            <div class="col-sm-6">
+            <div><button class="btn btn-info" type="submit">contact us</button></div>
+            </div>
+        </div>
+    </form>
+    </div>
+</div>    
+
+    
+    
+
+    
+{% endblock %}
